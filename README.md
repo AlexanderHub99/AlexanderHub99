@@ -13,9 +13,8 @@
 ---
 
 ## 🧭 Обо мне
-Backend developer (C#, .NET, PostgreSQL). Проектирую и разрабатываю отказоустойчивые Web API и real-time системы (WebSocket, бинарные протоколы). Работаю с PostgreSQL (Npgsql, Dapper), закладываю оптимизацию на этапе дизайна, люблю профилировать PerfView/VS Profiler, снижать аллокации и паузы GC. Цель — предсказуемая производительность и аптайм ≥99.9%.
-
-- 📍 Москва • Гражданство: РФ • Разрешение на работу: РФ, Беларусь, Грузия, Казахстан  
+Backend developer (C#, .NET WebApi/RT, PostgreSQL). Проектирую и разрабатываю отказоустойчивые REST WebAPI и real-time системы (WebSocket, бинарные протоколы). Работал с разными базами данных и ORM.
+- 📍 Ростов-на-дону • Гражданство: РФ • Разрешение на работу: РФ, Беларусь, Грузия, Казахстан  
 - 🧑‍💻 Опыт: 5+ лет (09.2020 → н.в.)  
 - 🌐 Портфолио: этот GitHub  
 - ☎️ Связь (предпочтительно): **+7 928 147-76-29** ・ **agames1448@gmail.com**
@@ -23,38 +22,53 @@ Backend developer (C#, .NET, PostgreSQL). Проектирую и разраба
 ---
 
 ## 🏆 Ключевые достижения
-- Реал-тайм сервер для мультиплеера (WebSocket, бинарный протокол): **~1000–1200 CCU/shard**, фан-аут 10–30k msg/мин/узел  
+- WebApi/RT для мультиплеера (WebSocket(бинарный протокол), REST): **~1000–1200 CCU/shard**, фан-аут 10–30k msg/мин/узел  
 - Задержки: **p95 ~30–60 мс**, GC p99 **<10–15 мс** на типовой нагрузке  
 - Снижение аллокаций на **50–70%**, CPU на **15–20%** (ArrayPool, фиксированные буферы, собственные пулы сообщений)  
 - Надёжность: **99.9% аптайм**, авто-восстановление соединений, backpressure/rate-limit, разделение на сервисы + **RabbitMQ**  
-- Бэкенд-логин с **JWT**, метрики/логи (**Prometheus/Grafana**), CI/CD (**GitHub Actions**, Docker)  
+- **Prometheus/Grafana**), CI/CD (**GitHub Actions**, Docker)  
 - Единый кроссплатформенный **Unity SDK** (Android/iOS/Web/Unity) — интеграции **31+ SDK**, ускорение интеграций в **5–10×**, −95% дефектов
 
 ---
 
 ## 🛠️ Технологии
-**Языки/платформа:** C# 10–12, .NET 6–8, async/await, TPL  
-**Web/RT:** ASP.NET Core (Kestrel), WebSocket (ws/wss), REST, JWT  
-**Данные:** PostgreSQL (Npgsql), **Dapper**, индексы, миграции, профилирование запросов  
-**Очереди:** RabbitMQ  
-**Тесты:** NUnit, Testcontainers  
-**Инфра:** Docker/Compose, Linux, GitHub Actions, Prometheus, Grafana  
-**Unity:** 2019+, серверная генерация воксельных карт, синхронизация состояний, матчмейкинг, шардинг  
-**Desktop:** WPF/MVVM, XAML, многопоточность (SemaphoreSlim, CTS, Concurrent\*)  
-**Мобильная/интеграции:** Android (Java/JNI), iOS (Obj-C/C++ bridge), Web (JS), CDP (Chrome DevTools Protocol)
+
+**Языки/платформа:** C# 10–12, .NET 6–8  
+**Web/RT:** ASP.NET Core (Kestrel), **ASP.NET Core Web API (REST: Controllers & Minimal APIs)**, **Swagger/OpenAPI**, **API Versioning**, WebSocket (ws/wss) 
+**Архитектура:** Многоуровневая (многослойная), DTO/Контракты,MediatR, CQRS, Pipeline Behaviors (валидация/логирование/кэш), DI/Options, Clean Architecture подход  
+**Middleware/Фильтры:** глобальная обработка ошибок, логирование запросов/исключений, CORS, HTTPS redirection, Response Compression (Gzip/Brotli), Rate Limiting, кастомные Action/Exception Filters  
+**Валидация/Безопасность:** DataAnnotations, FluentValidation, OAuth2/OIDC, JWT (roles/claims/scopes), **CORS** 
+**Надёжность/Производительность:** **Polly** (retry/circuit breaker), тайм-ауты/cancellation, **кэширование** (IMemoryCache/Redis), пагинация, идемпотентность (Idempotency-Key), профилирование запросов  
+**Наблюдаемость:** Serilog (структурные логи), OpenTelemetry, Prometheus, Grafana  
+**Данные:** PostgreSQL (Npgsql), SQL Server, SQLite, EF Core, Dapper,
+**Очереди/события:** RabbitMQ (event-driven, инкрементальное обновление агрегатов)
+**Тесты:** xUnit, Integration tests, FluentAssertions, Microsoft.AspNetCore.Mvc.Testing, **WebApplicationFactory, SQLite In-Memory
+**Инфра:** Docker/Compose, Docker, Windows, Linux, GitHub Actions, конфигурация `appsettings`/ENV, CI/CD  
+**Desktop:** **WPF/MVVM**, XAML (стили/триггеры/конвертеры), DataGrid-кастомизация
+**Мобильная/интеграции:** Android (Java/JNI), iOS (Obj-C/C++ bridge), Web (JS), CDP (Chrome DevTools Protocol)  
+**Unity:** 2019+, серверная генерация воксельных карт, синхронизация состояний, матчмейкинг
 
 <p>
   <img alt="C#" src="https://img.shields.io/badge/C%23-239120?logo=csharp&logoColor=white">
   <img alt=".NET" src="https://img.shields.io/badge/.NET-512BD4?logo=dotnet&logoColor=white">
-  <img alt="PostgreSQL" src="https://img.shields.io/badge/PostgreSQL-336791?logo=postgresql&logoColor=white">
+  <img alt="ASP.NET Core" src="https://img.shields.io/badge/ASP.NET%20Core-Web%20API%20%7C%20Minimal-5C2D91">
+  <img alt="OpenAPI" src="https://img.shields.io/badge/Swagger%20%7C%20OpenAPI-85EA2D?logo=swagger&logoColor=white">
+  <img alt="Versioning" src="https://img.shields.io/badge/API-Versioning-546E7A">
+  <img alt="Middleware" src="https://img.shields.io/badge/Middleware-Errors%20%7C%20CORS%20%7C%20Rate%20Limit-455A64">
+  <img alt="DTOs" src="https://img.shields.io/badge/DTOs-Contracts%20%7C%20AutoMapper-1565C0">
+  <img alt="FluentValidation" src="https://img.shields.io/badge/FluentValidation-2E7D32">
+  <img alt="Serilog" src="https://img.shields.io/badge/Serilog-Structured%20Logs-1E88E5">
+  <img alt="OpenTelemetry" src="https://img.shields.io/badge/OpenTelemetry-Traces%20%7C%20Metrics-FF6F00">
+  <img alt="EF Core" src="https://img.shields.io/badge/EF%20Core-SQL%20Server%20%7C%20SQLite-2E7D32">
   <img alt="Dapper" src="https://img.shields.io/badge/Dapper-0C4A6E">
   <img alt="RabbitMQ" src="https://img.shields.io/badge/RabbitMQ-FF6600?logo=rabbitmq&logoColor=white">
+  <img alt="xUnit" src="https://img.shields.io/badge/xUnit-5E5E5E">
+  <img alt="WebApplicationFactory" src="https://img.shields.io/badge/WebApplicationFactory-Testing-1976D2">
+  <img alt="ClosedXML" src="https://img.shields.io/badge/ClosedXML-Excel-43A047">
   <img alt="Docker" src="https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white">
   <img alt="Linux" src="https://img.shields.io/badge/Linux-FCC624?logo=linux&logoColor=black">
-  <img alt="Unity" src="https://img.shields.io/badge/Unity-000000?logo=unity&logoColor=white">
   <img alt="WPF" src="https://img.shields.io/badge/WPF-5C2D91?logo=.net&logoColor=white">
 </p>
-
 ---
 
 ## 👷‍♂️ Опыт
@@ -98,32 +112,10 @@ SDK/реклама/аналитика/покупки, релизы, метрик
 ---
 
 ## 🔤 Языки
-Русский — родной · Английский — **B1**
+Русский — родной · Английский — **B1** - читаю доку
 
 ---
 
 ## 🤝 Рекомендации
 - **Владимир Манюнин** — Team Lead отдела аналитики, ООО «Фаренгейт Лаб»: связь по запросу
 - **Денис Федчинко** — Директор, ООО «Фаренгейт Лаб»: связь по запросу
-
----
-
-## 📦 Проекты/темы, в которых силён
-- Real-time: WebSocket, бинарные протоколы, фан-аут, backpressure/rate-limit, авто-reconnect  
-- Производительность: ArrayPool\<T\>, фиксированные буферы, пулы сообщений, PerfView/VS, снижение аллокаций/GC-пауз  
-- Данные: PostgreSQL + Dapper, индексы, миграции, p95 запросов 8–15 мс  
-- Надёжность: 99.9% аптайм, метрики/алерты (Prometheus/Grafana), feature flags, изоляция сервисов + RabbitMQ  
-- Unity-сервер: воксельные карты, синхронизации, матчмейкинг, шардинг  
-- Desktop/WPF: MVVM, многопоточность, оркестрация CDP-ботов (20–40 параллельных)
-
----
-
-## 📈 GitHub статистика
-<p align="center">
-  <a href="https://github.com/anuraghazra/github-readme-stats">
-    <img height="160" src="https://github-readme-stats.vercel.app/api?username=AlexanderHub99&show_icons=true&hide_title=true&include_all_commits=true&rank_icon=github" alt="GitHub Stats">
-  </a>
-  <a href="https://git.io/streak-stats">
-    <img height="160" src="https://streak-stats.demolab.com?user=AlexanderHub99" alt="GitHub Streak">
-  </a>
-</p>

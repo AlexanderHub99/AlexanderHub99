@@ -62,3 +62,12 @@
   <img alt="WPF" src="https://img.shields.io/badge/WPF-5C2D91?logo=.net&logoColor=white">
 </p>
 ---
+
+![Build](https://img.shields.io/github/actions/workflow/status/AlexanderHub99/RepoName/ci.yml?branch=main)
+![Tests](https://img.shields.io/github/actions/workflow/status/AlexanderHub99/RepoName/tests.yml?label=tests)
+![Last commit](https://img.shields.io/github/last-commit/AlexanderHub99/RepoName)
+![Issues](https://img.shields.io/github/issues/AlexanderHub99/RepoName)
+![PRs](https://img.shields.io/github/issues-pr/AlexanderHub99/RepoName)
+![License](https://img.shields.io/github/license/AlexanderHub99/RepoName)
+![Repo Stats](https://github-readme-stats.vercel.app/api/pin/?username=AlexanderHub99&repo=RepoName&theme=tokyonight)
+

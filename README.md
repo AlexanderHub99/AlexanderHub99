@@ -34,18 +34,31 @@ Backend developer (C#, .NET WebApi/RT, PostgreSQL). Проектирую и ра
 ## 🛠️ Технологии
 
 **Языки/платформа:** C# 10–12, .NET 6–8  
+
 **Web/RT:** ASP.NET Core (Kestrel), **ASP.NET Core Web API (REST: Controllers & Minimal APIs)**, **Swagger/OpenAPI**, **API Versioning**, WebSocket (ws/wss) 
+
 **Архитектура:** Многоуровневая (многослойная), DTO/Контракты,MediatR, CQRS, Pipeline Behaviors (валидация/логирование/кэш), DI/Options, Clean Architecture подход  
+
 **Middleware/Фильтры:** глобальная обработка ошибок, логирование запросов/исключений, CORS, HTTPS redirection, Response Compression (Gzip/Brotli), Rate Limiting, кастомные Action/Exception Filters  
+
 **Валидация/Безопасность:** DataAnnotations, FluentValidation, OAuth2/OIDC, JWT (roles/claims/scopes), **CORS** 
+
 **Надёжность/Производительность:** **Polly** (retry/circuit breaker), тайм-ауты/cancellation, **кэширование** (IMemoryCache/Redis), пагинация, идемпотентность (Idempotency-Key), профилирование запросов  
+
 **Наблюдаемость:** Serilog (структурные логи), OpenTelemetry, Prometheus, Grafana  
+
 **Данные:** PostgreSQL (Npgsql), SQL Server, SQLite, EF Core, Dapper,
+
 **Очереди/события:** RabbitMQ (event-driven, инкрементальное обновление агрегатов)
+
 **Тесты:** xUnit, Integration tests, FluentAssertions, Microsoft.AspNetCore.Mvc.Testing, **WebApplicationFactory, SQLite In-Memory
+
 **Инфра:** Docker/Compose, Docker, Windows, Linux, GitHub Actions, конфигурация `appsettings`/ENV, CI/CD  
+
 **Desktop:** **WPF/MVVM**, XAML (стили/триггеры/конвертеры), DataGrid-кастомизация
-**Мобильная/интеграции:** Android (Java/JNI), iOS (Obj-C/C++ bridge), Web (JS), CDP (Chrome DevTools Protocol)  
+
+**Мобильная/интеграции:** Android (Java/JNI), iOS (Obj-C/C++ bridge), Web (JS), CDP (Chrome DevTools Protocol)
+
 **Unity:** 2019+, серверная генерация воксельных карт, синхронизация состояний, матчмейкинг
 
 <p>

@@ -1,14 +1,4 @@
 <h1 align="center">Привет, я Александр — Backend Developer (.NET/C#) 🚀</h1>
-<p align="center">
-  Строю высоконагруженные real-time сервисы на ASP.NET Core + PostgreSQL, оптимизирую GC/аллокации, люблю профилировать и добиваться аптайма 99.9%+
-</p>
-
-<p align="center">
-  <a href="mailto:agames1448@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-agames1448%40gmail.com-informational?logo=gmail"></a>
-  <a href="https://github.com/AlexanderHub99"><img alt="GitHub" src="https://img.shields.io/badge/GitHub-AlexanderHub99-black?logo=github"></a>
-  <img alt="Location" src="https://img.shields.io/badge/Москва-RU-blue">
-  <img alt="Relocation" src="https://img.shields.io/badge/Готов%20к-релокации%20и%20командировкам-success">
-</p>
 
 ---
 
